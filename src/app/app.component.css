@@ -1,14 +1,25 @@
+/* Asegurar que la página ocupa toda la pantalla y no permite scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* Bloquea el scroll */
+}
+
+/* Contenedor principal con Grid */
 .grid-container {
   display: grid;
   grid-template-areas:
     "navbar navbar"
     "breadcrumb breadcrumb"
     "sidebar content";
-  grid-template-rows: auto auto 1fr; /* Altura de las filas */
-  grid-template-columns: 250px 1fr; /* Ancho de las columnas */
+  grid-template-rows: auto auto 1fr; /* Ajuste automático de altura */
+  grid-template-columns: 250px 1fr; /* Sidebar fijo y contenido flexible */
   height: 100vh;
+  width: 100vw;
 }
 
+/* Definir las áreas del grid */
 app-navbar {
   grid-area: navbar;
 }
@@ -20,9 +31,14 @@ app-breadcrumb {
 app-sidebar {
   grid-area: sidebar;
   background-color: #f4f4f4;
+  overflow: hidden; /* Evita que el sidebar haga scroll */
 }
 
+/* Asegurar que el contenido no haga scroll */
 app-content {
   grid-area: content;
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden; /* Bloquea el scroll */
 }

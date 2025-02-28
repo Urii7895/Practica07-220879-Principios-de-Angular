@@ -1,0 +1,13 @@
+footer {
+  width: calc(100% - 250px); /* Resta el ancho del sidebar */
+  height: 40px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  left: 250px; /* Mueve el footer a la derecha del sidebar */
+  border-radius: 0;
+}

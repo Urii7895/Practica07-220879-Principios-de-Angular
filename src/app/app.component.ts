@@ -4,12 +4,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContentComponent } from './components/content/content.component';
 
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent,SidebarComponent,ContentComponent,BreadcrumbComponent],
+  imports: [NavbarComponent,SidebarComponent,ContentComponent,BreadcrumbComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
