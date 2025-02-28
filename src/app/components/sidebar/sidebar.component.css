@@ -1,0 +1,7 @@
+/* Cambiar el fondo del Sidebar */
+.col-auto.bg-light {
+    background-color: #eaa3eb !important; /* Azul fuerte */
+    width: 250px; /* Puedes ajustarlo según necesites */
+    height: 888px; /* Hace que el sidebar ocupe toda la altura */
+
+}

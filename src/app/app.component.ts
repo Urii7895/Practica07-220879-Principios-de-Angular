@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ContentComponent } from './components/content/content.component';
+
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [NavbarComponent,SidebarComponent,ContentComponent,BreadcrumbComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

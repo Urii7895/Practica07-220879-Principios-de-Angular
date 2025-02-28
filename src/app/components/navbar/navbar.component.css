@@ -1,0 +1,4 @@
+/* Especificidad mayor para asegurar que el fondo azul se aplique */
+nav.navbar {
+    background-color: #44b4e4 !important; /* Azul fuerte */
+}

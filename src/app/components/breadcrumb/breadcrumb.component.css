@@ -1,0 +1,33 @@
+/* Asegura que el sidebar y el navbar estén alineados sin dejar espacio */
+app-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Asegura que el sidebar ocupe toda la altura */
+}
+.breadcrumb-container {
+  background-color: #7cd08c; 
+  width: 86.800%; /* Ajusta el ancho */
+  margin-left: 250px; /* Lo empuja a la derecha */
+  margin-right: 20px; /* Separa del borde derecho */
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end; /* Alinea el breadcrumb a la derecha */
+  position: relative; /* Permite ajustar la posición */
+  top: 50px; /* Lo baja 50px */
+}
+
+app-navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que el navbar esté sobre otros elementos */
+}
+
+/* Ajusta el contenido para que no haya separación */
+app-content {
+  margin-left: 100px; /* Ajusta según el ancho del sidebar */
+  padding-top: 60px;  /* Ajusta según la altura del navbar */
+}
