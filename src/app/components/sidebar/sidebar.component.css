@@ -1,6 +1,6 @@
 /* Estilos del Sidebar */
 .sidebar {
-    background-color: #b09ce4 !important; /* Azul fuerte */
+    background-color: #e299f3 !important; /* Azul fuerte */
     width: 250px;
     height: 100vh; /* Ocupa toda la altura */
     transition: transform 0.3s ease-in-out;
