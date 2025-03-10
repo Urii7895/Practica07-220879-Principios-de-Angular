@@ -1,11 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { PracticeService } from '../../services/practice.service'; // Ajusta la ruta según tu estructura
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  @Output() logoutEvent = new EventEmitter<void>();
 
+  constructor(private practiceService: PracticeService) {} // Inyecta el servicio
+
+  logout() {
+    console.log("⛔ Click en Sign Out");
+    this.logoutEvent.emit();
+  }
+
+  selectPractice(practice: string) {
+    this.practiceService.setSelectedPractice(practice); // Usa el servicio para enviar la práctica
+  }
 }
